@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getCookie(name){
+            var arr,reg = new RegExp("(^|)" + name + "=([^;]*)(;|$)");
+            if(arr = document.cookie.match(reg)){
+                return arr[2];
+            } else{
+                return null;
+            }
+        }
+        var str = '_mkto_trk=id:335-VIN-535&token:_mch-qs.com-1511925175055-51355; _ga=GA1.2.1821934532.1511925175; username=ysw; uid=12345612';
+        // var pos = qs_item.indexOf('username=');
+        // var username = str.substring(0,url.indexOf('username='));
+        // console.log(username)
+        var name = "username" 
+        // 在字符串匹配特写值的小范围正则方式
+        // [^;] 只要不是分好就取
+        // ;|$ 第一次碰到分好就停止
+        var reg = new RegExp("(^|)" + name + "=([^;]*)(;|$)");  //正则对象 含有match test
+        // console.log(str.match(reg));
+        var arr = str.match(reg);
+        console.log(arr[2]);
+    </script>
+</body>
+</html>
